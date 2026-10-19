@@ -1,0 +1,78 @@
+{
+  "generated_at": "2026-10-19T02:51:23.215Z",
+  "source": "recruitment_logs.csv",
+  "assumptions": {
+    "fail_cost": 75,
+    "gray_cost": 20,
+    "stale_threshold_min": 15
+  },
+  "data_quality": {
+    "raw_rows": 1162,
+    "duplicate_rows_dropped": 55,
+    "rows_after_dedupe": 1107,
+    "unknown_status": 49,
+    "decided": 1058
+  },
+  "overall": {
+    "success": 915,
+    "fail": 143,
+    "fail_rate": 0.13516068052930058
+  },
+  "staleness": {
+    "p50_min": 9,
+    "p90_min": 45,
+    "max_min": 65,
+    "fresh_attempts": 794,
+    "stale_attempts": 264,
+    "stale_share": 0.2495274102079395
+  },
+  "contrast": {
+    "fresh_fail_rate": 0.04534005037783375,
+    "stale_fail_rate": 0.4053030303030303,
+    "relative_risk": 8.939183501683502,
+    "paf": 0.6645470398619013,
+    "zone_permutation_p": 0.04,
+    "pool_permutation_p": 0.70575
+  },
+  "policy": {
+    "recommended": "B. 快照 >15 分钟置灰（推荐）",
+    "gated": 264,
+    "avoided_failures": 107,
+    "hit_rate": 0.4053030303030303,
+    "failure_rate_before": 0.13516068052930058,
+    "failure_rate_after": 0.04534005037783375,
+    "net_benefit": 2745,
+    "break_even_gray_cost": 30.397727272727273
+  },
+  "holdout": {
+    "train_rows": 585,
+    "test_rows": 473,
+    "threshold_selected": 18,
+    "test_fail_rate_before": 0.14799154334038056,
+    "test_fail_rate_after": 0.06301369863013699,
+    "test_net_benefit": 1365,
+    "fixed_15_fail_rate_after": 0.055248618784530384,
+    "fixed_15_net_benefit": 1530
+  },
+  "control_zone": {
+    "name": "青龙二区",
+    "stale_attempts": 65,
+    "stale_failures": 4,
+    "stale_fail_rate": 0.06153846153846154,
+    "others_stale_attempts": 199,
+    "others_stale_failures": 103,
+    "others_stale_fail_rate": 0.5175879396984925,
+    "expected_total_failures": 83.62650825375675,
+    "expected_total_ci": [
+      38.41905396402398,
+      81.101895032941
+    ],
+    "saved_by_validation": 4425
+  },
+  "money": {
+    "confirmed_loss": 10725,
+    "unverified_at_risk": 3675,
+    "all_fresh_counterfactual_failures": 48,
+    "all_fresh_counterfactual_saved": 7125
+  }
+}

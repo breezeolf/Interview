@@ -1,0 +1,5 @@
+remain_band,control_n,control_failures,control_fail_rate,others_n,others_failures,others_fail_rate
+0-5,54,17,0.3148,141,22,0.1560
+5-10,57,2,0.0351,115,16,0.1391
+10-20,79,4,0.0506,241,33,0.1369
+20+,84,0,0.0000,287,49,0.1707
